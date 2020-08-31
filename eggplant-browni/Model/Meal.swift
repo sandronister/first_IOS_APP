@@ -11,17 +11,18 @@ import UIKit
 class Meal: NSObject {
     let name:String
     let happy:Int
-    let list:Array<Item> = []
+    var itens:Array<Item> = []
     
-    init(name:String,happy:Int) {
+    init(name:String,happy:Int,itens:[Item]=[]) {
         self.name=name
         self.happy=happy
+        self.itens = itens
     }
     
     func printList(){
         
         var count = 1
-        for item in self.list{
+        for item in self.itens{
             print("#Item \(count) - \(item.name) -------- \(item.cal)")
             count+=1
         }
@@ -30,7 +31,7 @@ class Meal: NSObject {
     func sumCal(){
         var total:Double = 0
         
-        for item in self.list{
+        for item in self.itens{
             total+=item.cal
         }
         
