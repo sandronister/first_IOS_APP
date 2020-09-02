@@ -122,6 +122,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mBU-TD-ATI"/>
                     <connections>
+                        <outlet property="itensTableView" destination="Zey-Kk-eT7" id="V5C-qi-EvB"/>
                         <outlet property="levelHappyTextField" destination="4La-EK-GyR" id="s8E-Hr-3Yc"/>
                         <outlet property="nameTextField" destination="Crg-8G-42C" id="FUi-Ln-FrV"/>
                     </connections>

@@ -37,4 +37,16 @@ class Meal: NSObject {
         
         print("Total de calorias \(total)")
     }
+    
+    func message()->String{
+        var message = "Felicidade \(self.happy)\n"
+        
+        var count = 1
+        for item in self.itens{
+            message+="#\(count) -- \(item.name) \(item.cal)\n"
+            count+=1
+        }
+        
+        return message
+    }
 }
