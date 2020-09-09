@@ -10,7 +10,16 @@ import UIKit
 
 class MealsController: UITableViewController, addMealsDelegate {
     
-    var listMeals = [Meal(name: "Shawarma", happy:5),Meal(name:"Entrecote", happy:5),Meal(name: "Chorizo", happy:4),Meal(name: "Feijoada", happy:3)]
+    var listMeals:Array<Meal> = []
+    
+    override func viewDidLoad() {
+        self.loadMeals()
+    }
+    
+    func loadMeals(){
+        guard let meals = MealDao().load() else {return }
+        listMeals = meals
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listMeals.count
@@ -34,13 +43,19 @@ class MealsController: UITableViewController, addMealsDelegate {
             guard let indexPath = tableView.indexPath(for: cell) else { return }
             let meal = listMeals[indexPath.row]
             
-            Message.info(self, title: meal.name, message: meal.message())
+            Message.remove(self, title: meal.name, message: meal.message(),handler:{
+                action in
+                self.listMeals.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            })
         }
     }
     
     func add(_ meal:Meal){
         self.listMeals.append(meal)
         tableView.reloadData()
+        
+        MealDao().save(listMeals)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

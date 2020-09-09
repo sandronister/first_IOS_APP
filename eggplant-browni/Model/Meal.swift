@@ -8,17 +8,34 @@
 
 import UIKit
 
-class Meal: NSObject {
+class Meal: NSObject, NSCoding {
+   
+    // MARK: - Atributes
     let name:String
     let happy:Int
     var itens:Array<Item> = []
     
+    // MARK: - Init
     init(name:String,happy:Int,itens:[Item]=[]) {
         self.name=name
         self.happy=happy
         self.itens = itens
     }
     
+    // MARK: - NScoding Methods
+     func encode(with coder: NSCoder) {
+         coder.encode(name,forKey: "name")
+         coder.encode(happy,forKey:"happy")
+         coder.encode(itens,forKey: "itens")
+     }
+        
+     required init?(coder: NSCoder) {
+        self.name = coder.decodeObject(forKey:"name") as! String
+        self.happy = coder.decodeInteger(forKey: "happy")
+        self.itens = coder.decodeObject(forKey: "itens") as! Array<Item>
+     }
+    
+    // MARK: - Methods
     func printList(){
         
         var count = 1

@@ -16,6 +16,7 @@
 		4149CE6C24FA9031009BDD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4149CE6A24FA9031009BDD94 /* Main.storyboard */; };
 		4149CE6E24FA9032009BDD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4149CE6D24FA9032009BDD94 /* Assets.xcassets */; };
 		4149CE7124FA9032009BDD94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4149CE6F24FA9032009BDD94 /* LaunchScreen.storyboard */; };
+		414A28E725070B2700650798 /* MealDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414A28E625070B2700650798 /* MealDao.swift */; };
 		419F479224FF25570064DE65 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F479124FF25570064DE65 /* Message.swift */; };
 		41E0541B24FD8BC50061E59B /* AddItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0541924FD8BC50061E59B /* AddItensViewController.swift */; };
 		41E0541C24FD8BC50061E59B /* AddItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E0541A24FD8BC50061E59B /* AddItensViewController.xib */; };
@@ -33,6 +34,7 @@
 		4149CE6D24FA9032009BDD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4149CE7024FA9032009BDD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4149CE7224FA9032009BDD94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		414A28E625070B2700650798 /* MealDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDao.swift; sourceTree = SOURCE_ROOT; };
 		419F479124FF25570064DE65 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		41D2D56B24FAEA4300AF7611 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "../../../Library/Autosave Information/MyPlayground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		41E0541924FD8BC50061E59B /* AddItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItensViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		41007A3924FBF3C400C1F8F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				414A28E625070B2700650798 /* MealDao.swift */,
 				41007A3C24FBF46100C1F8F8 /* Meal.swift */,
 				41007A3E24FBF49700C1F8F8 /* Item.swift */,
 			);
@@ -199,6 +202,7 @@
 				4149CE6524FA9031009BDD94 /* AppDelegate.swift in Sources */,
 				41E0541B24FD8BC50061E59B /* AddItensViewController.swift in Sources */,
 				4149CE6724FA9031009BDD94 /* SceneDelegate.swift in Sources */,
+				414A28E725070B2700650798 /* MealDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

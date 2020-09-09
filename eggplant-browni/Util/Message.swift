@@ -18,4 +18,16 @@ class Message{
         controller.present(alert,animated: true,completion: nil)
     }
     
+    static func remove(_ controller:UIViewController, title:String="Aviso",message:String,handler:@escaping(UIAlertAction)->Void){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let actionCancel = UIAlertAction(title:"Cancel", style:.cancel)
+        alert.addAction(actionCancel)
+        
+        let actionRemove = UIAlertAction(title:"Remove", style: .destructive, handler: handler)
+        alert.addAction(actionRemove)
+        
+        controller.present(alert,animated: true,completion:nil)
+    }
+    
 }
